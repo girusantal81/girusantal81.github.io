@@ -1,0 +1,113 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+
+html {
+    width: 70%;
+    border-color: brown;
+    border: 2px solid;
+    font-family: 'roboto';
+    scroll-behavior: smooth;
+}
+
+header {
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+    background-image: url('../img/pilis-mountain.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    padding: 38.7px;
+    color: #FF7F2A;
+}
+
+nav {
+    list-style-type: none;
+    background-color: #FF7F2A;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    float: left;
+    width: 33.33333%;
+    /*padding: 10px 0;*/
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
+ul li:hover {
+    background-color: #BF153F;
+}
+
+div{
+    background-color: white;
+    color: #555;
+}
+body {
+    background-color: #FFFFD4;
+    color: #BF153F;
+}
+
+h2 {
+    text-align: center;
+    padding: 40px;
+}
+
+img {
+    width: 30%;
+    padding: 0px 10px 0px 0px;
+}
+
+img.float-right {
+    float: left;
+    height: auto;
+}
+
+iframe.video {
+    display: block;
+    margin: 0 auto;
+    padding: 0 0 20px 0;
+}
+
+p {
+    text-align: justify;
+    padding: 0 5px 10px 5px;
+    line-height: 1.5;
+}
+
+a {
+    display: block;
+    text-align: center;
+    padding: 10px;
+}
+
+p.video {
+    width: 50%;
+    text-align: center;
+}
+
+p.quote {
+    font-size: larger;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    clear: both;
+}
