@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ ul {
+    list-style-type: none;
+    background-color: #FFCC3C;
+    width: 100%;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+ 
+}
+
+ul li {
+    float: left;
+}
+
+.kontaktright{
+    float: right;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+.kontaktright{
+    float: right;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+ul li a {
+    display: block;
+    margin: auto;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #133360;
+}
+
+ul li a:hover {
+    background-color:#e0b335;
+    color: #2e6dc5;
+    font-size: large;
+}
+
+header {
+    padding: 2px;
+    background-color: #ffe498;
+    color: #3b67aa;
+    text-align: center;
+}
+
+h1, h2 {
+    padding: 5px;
+}
+
+div.mainpage {
+    background-color: #fff2cf;
+    max-width: 90%;
+    padding: 10px;
+    margin: 0 auto;
+    color: #133360;
+}
+
+div.mainpage::after{
+    content: "";
+    clear: both;
+    display: table;
+}
+
+div.innerdata{
+    width: 50%;
+    background-color: #fad974;
+    padding: 20px;
+    margin: 11px auto;
+
+}
+
+div.innerdata:hover{
+    background-color: #ffd455;
+    font-weight: bolder;
+}
+
+div.kontaktdata{
+    float: left;
+    width: 45%;
+    margin: 1%;
+    padding: 1%;
+    background-color: #f8e09d;
+    color: #2762b4;
+    text-align: center;
+ }
+
+ iframe{
+    width: 90%;
+ }
+
+ #thanks {
+    margin: auto;
+    text-align: center;
+    font-size: xx-large;
+    color: #0e67e4;
+ }
+
+ p{
+    padding: 10px;
+ }
+
+ body{
+    background-image: url(../img/Hajdunanas.jpg);
+    background-position: center;
+ }

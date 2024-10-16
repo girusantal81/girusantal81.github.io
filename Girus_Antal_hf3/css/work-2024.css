@@ -1,0 +1,176 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+ul {
+    list-style-type: none;
+    background-color: #7285A8;
+    width: 100%;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+
+}
+
+ul li {
+    float: left;
+}
+
+.kontaktright {
+    float: right;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+ul li a {
+    display: block;
+    margin: auto;
+    padding: 10px 14px;
+    text-decoration: none;
+    color: #133360;
+}
+
+ul li a:hover {
+    background-color: #6b7d9d;
+    color: #a8bddb;
+    font-size: large;
+}
+
+header {
+    padding: 2px;
+    background-color: #8BB2D9;
+    color: #0e223f;
+    text-align: center;
+}
+
+h1,
+h2 {
+    padding: 5px;
+}
+
+h3 {
+    color: #051833;
+    font-size: x-large;
+    font-weight: bolder;
+    padding: 10px;
+    text-align: center;
+}
+
+p {
+    padding: 1px 20px;
+}
+
+body {
+    background-color: #a1c4f5;
+}
+
+
+div.content {
+    background-color: #5b88b6;
+    max-width: 70%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+div.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+div.card {
+    float: left;
+    width: 21%;
+    margin: 1%;
+    padding: 1%;
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+#colored-table {
+    margin: auto;
+}
+
+
+div.content-2 {
+    background-color: #c5e2ff;
+    max-width: 70%;
+    padding: 10px;
+    margin: auto;
+}
+
+div.content-2 ul li {
+    width: 40%;
+    margin: auto;
+    float: none;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+}
+
+div.content-2 ul{
+    background-color:#c5e2ff;
+}
+
+#holiday {
+    background-color: rgb(239, 64, 64);
+}
+
+#lazydayin {
+    background-color: greenyellow;
+}
+
+#lazydayout {
+    background-color: orange;
+}
+
+#lazyday {
+    background-color: #0059b2;
+    color: #86bdf4;
+}
+
+#weekday {
+    background-color: #0059b2;
+    color: #86bdf4;
+}
+/*
+#workday {
+    background-color: #297fd5;
+}
+*/
+table {
+    width: 100%;
+}
+
+div.card td {
+    background-color: #297fd5;
+    width: 11%;
+}
+
+td:hover {
+    font-weight: 900;
+    color: aliceblue;
+    font-size: medium;
+}*/
+
+#weekday:hover {
+    color: aliceblue;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    background: orangered;
+    transition: background 1s, transform 1s;
+    transition-timing-function: ease-out;
+}
+
+td:hover {
+    background: greenyellow;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
