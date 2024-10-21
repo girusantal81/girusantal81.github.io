@@ -1,0 +1,259 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    width: 90%;
+    margin: auto;
+    border-color: brown;
+    border: 2px solid;
+    font-family: 'roboto';
+    scroll-behavior: smooth;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#sunsystem-head {
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+    height: 206px;
+    background-image: url('../img/solarsystem.JPG');
+    background-size: cover;
+    background-position: initial;
+}
+
+#innerplanets-head {
+    padding: 0px;
+    margin: 0;
+    height: 185px;
+    background-image: url('../img/inner-planets.JPG');
+    background-size: cover;
+    background-position: contain;
+    box-sizing: border-box;
+}
+
+#outerplanets-head {
+    padding: 0px;
+    margin: 0;
+    height: 300px;
+    background-image: url('../img/solar-system-outer.jpg');
+    background-size: cover;
+    background-position: contain;
+    box-sizing: border-box;
+}
+
+#asteroidbelts-head {
+    padding: 0px;
+    margin: 0;
+    height: 300px;
+    background-image: url('../img/asteroidbelt-wall.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+h1 {
+    padding: 100px;
+    color: rgb(189, 153, 153);
+}
+
+nav {
+    list-style-type: none;
+    /*background-color: #e0fa4d;  */
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+
+}
+
+ul li.sun {
+    background-image: url("../img/sun.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+ul li.earth {
+    background-image: url("../img/earth-2.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul li.jupiter {
+    background-image: url("../img/jupiter.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul li.asteroid {
+    background-image: url("../img/asteroid.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+ul li {
+    float: left;
+    width: 25%;
+    /*background-image: url("../img/sun.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;*/
+}
+
+ul li:hover {
+    height: 100px;
+}
+
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(73, 214, 242);
+    font-size: x-large;
+    font-weight: bold;
+    padding: 20px;
+}
+
+ul li a:hover {
+    color: rgb(255, 255, 82);
+    padding: 35px 0;
+}
+
+div {
+    background-color: white;
+    color: #555;
+}
+
+body {
+    background-color: #FFFFD4;
+}
+
+h2 {
+    text-align: center;
+    padding: 40px;
+}
+
+h3 {
+    text-align: center;
+    padding: 30px;
+}
+
+img {
+    width: 40%;
+    padding: 10px;
+}
+
+img.float-right {
+    float: left;
+    height: auto;
+}
+
+img.float-left {
+    float: right;
+    height: auto;
+}
+
+p {
+    text-align: justify;
+    padding: 0 5px 10px 5px;
+    line-height: 1.5;
+}
+
+#sunsystem {
+    background-color: #f9eca3;
+    /* Nap sárga szín */
+    background-image: radial-gradient(circle at left 900px, white 0%, #f7f7f7 25%, #FF8C00 100%);
+}
+
+#innerplanet {
+    background-color: green;
+    /* Nap sárga szín */
+    background-image: radial-gradient(circle at left top, rgb(241, 247, 241) 0%, rgb(11, 185, 11) 70%, rgb(245, 110, 7) 100%);
+}
+
+#asteroid-main {
+    background-image: url("../img/sky.jpg");
+    background-position: center;
+    color: #e0fa4d
+}
+
+#outerplanet {
+    margin: 0;
+    background: linear-gradient(135deg,  rgba(44, 139, 160, 0.922),rgba(74, 62, 128, 0.8), rgba(246, 250, 252, 0.8));
+    background-size: 500% 500%;
+    animation: gradient 3s ease 2;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+#asteroidbelts-head {
+    position: relative;
+    /* Az animációhoz szükséges */
+    /* overflow: hidden; /* A kép nem léphet ki a konténerből */
+}
+
+.animated-image {
+    position: absolute;
+    /* Az abszolút pozicionálás lehetővé teszi a mozgást */
+    top: 10%;
+    /* Középre pozicionálás */
+    transform: translateY(-50%);
+    /* Függőleges középre igazítás */
+    left: -200px;
+    /* Kezdő pozíció balról */
+    animation: moveRight 3s forwards;
+    /* Animáció alkalmazása */
+}
+
+@keyframes moveRight {
+
+    0% {
+        left: -500px;
+    }
+
+    /*10%{
+        top: 100px;
+        rotate:-15deg;
+    }
+    20%{
+        top:200px;
+        rotate:-30deg;
+    }*/
+    30% {
+        top: 200px;
+        rotate: -45deg;
+    }
+
+    100% {
+        left: 80%;
+        rotate: -60deg;
+    }
+
+}
