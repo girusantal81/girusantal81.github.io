@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="2025. évi Forma 1 versenyek. Versenyek időpontjai. Induló csapatok, istállók. Tervezett helyszínek, verseny pályák.">
+    <link rel="icon" href="icon/f1-ico.png" type="image/png">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Forma 1 2025 | Versenyek pályák istállók</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li>
+                <a href="index.html">Főmenü</a>
+            </li>
+            <li>
+                <a href="circuits.html">Pályák</a>
+            </li>
+            <li><a href="">Istállók</a></li>
+            <li><a href="race-calendar.html">Versenynaptár</a></li>
+        </ul>
+    </nav>
+    <main>
+        <sidebar>
+            <span>Melyik verseny a kedvence?</span>
+            <section class="circuit-1">
+                <section class="circuit-1">
+                    <label for="circuit-1">Melbourne</label>
+                    <input type="checkbox" name="circuit-1" value="1" id="circuit-1">
+                </section>
+                <section class="circuit-2">
+                    <label for="circuit-2">Sanghaj</label>
+                    <input type="checkbox" name="circuit-2" value="2" id="circuit-2">
+                </section>
+                <section class="circuit-3">
+                    <label for="circuit-3">Szuzuka</label>
+                    <input type="checkbox" name="circuit-3" value="3" id="circuit-3">
+                </section>
+                <section class="circuit-4">
+                    <label for="circuit-4">Szahír</label>
+                    <input type="checkbox" name="circuit-4" value="4" id="circuit-4">
+                </section>
+                <section class="circuit-5">
+                    <label for="circuit-5">Dzsidda</label>
+                    <input type="checkbox" name="circuit-5" value="5" id="circuit-5">
+                </section>
+                <section class="circuit-6">
+                    <label for="circuit-6">Miami</label>
+                    <input type="checkbox" name="circuit-6" value="6" id="circuit-6">
+                </section>
+                <section class="circuit-7">
+                    <label for="circuit-7">Imola</label>
+                    <input type="checkbox" name="circuit-7" value="7" id="circuit-7">
+                </section>
+                <section class="circuit-8">
+                    <label for="circuit-8">Monte-Carlo</label>
+                    <input type="checkbox" name="circuit-8" value="8" id="circuit-8">
+                </section>
+                <section class="circuit-9">
+                    <label for="circuit-9">Barcelona</label>
+                    <input type="checkbox" name="circuit-9" value="9" id="circuit-9">
+                </section>
+                <section class="circuit-10">
+                    <label for="circuit-10">Montreal</label>
+                    <input type="checkbox" name="circuit-10" value="10" id="circuit-10">
+                </section>
+                <section class="circuit-11">
+                    <label for="circuit-11">Spielberg</label>
+                    <input type="checkbox" name="circuit-11" value="11" id="circuit-11">
+                </section>
+                <section class="circuit-12">
+                    <label for="circuit-12">Silverstone</label>
+                    <input type="checkbox" name="circuit-12" value="12" id="circuit-12">
+                </section>
+                <section class="circuit-13">
+                    <label for="circuit-13">Spa-Francorchamps</label>
+                    <input type="checkbox" name="circuit-13" value="13" id="circuit-13">
+                </section>
+                <section class="circuit-14">
+                    <label for="circuit-14">Hungaroring</label>
+                    <input type="checkbox" name="circuit-14" value="14" id="circuit-14">
+                </section>
+                <section class="circuit-15">
+                    <label for="circuit-15">Zandvoort</label>
+                    <input type="checkbox" name="circuit-15" value="15" id="circuit-15">
+                </section>
+                <section class="circuit-16">
+                    <label for="circuit-16">Monza</label>
+                    <input type="checkbox" name="circuit-16" value="16" id="circuit-16">
+                </section>
+                <section class="circuit-17">
+                    <label for="circuit-17">Baku</label>
+                    <input type="checkbox" name="circuit-17" value="17" id="circuit-17">
+                </section>
+                <section class="circuit-18">
+                    <label for="circuit-18">Szingapúr</label>
+                    <input type="checkbox" name="circuit-18" value="18" id="circuit-18">
+                </section>
+                <section class="circuit-19">
+                    <label for="circuit-19">Austin</label>
+                    <input type="checkbox" name="circuit-19" value="19" id="circuit-19">
+                </section>
+                <section class="circuit-20">
+                    <label for="circuit-20">Mexikóváros</label>
+                    <input type="checkbox" name="circuit-20" value="20" id="circuit-20">
+                </section>
+                <section class="circuit-21">
+                    <label for="circuit-21">Interlagos</label>
+                    <input type="checkbox" name="circuit-21" value="21" id="circuit-21">
+                </section>
+                <section class="circuit-22">
+                    <label for="circuit-22">Las Vegas</label>
+                    <input type="checkbox" name="circuit-22" value="22" id="circuit-22">
+                </section>
+                <section class="circuit-23">
+                    <label for="circuit-23">Lusail</label>
+                    <input type="checkbox" name="circuit-23" value="23" id="circuit-23">
+                </section>
+                <section class="circuit-24">
+                    <label for="circuit-24">Abu Dhabi</label>
+                    <input type="checkbox" name="circuit-24" value="24" id="circuit-24">
+                </section>
+              
+
+                <button id="myBtn" onclick="javascript:alert('Köszönjük a szavazatát!')">Mehet</button>
+
+                <script>
+                    var input = document.getElementById("myInput");
+                    input.addEventListener("keypress", function (event) {
+                        if (event.key === "Enter") {
+                            event.preventDefault();
+                            document.getElementById("myBtn").click();
+                        }
+                    });
+                </script>
+            </section>
+        </sidebar>
+        <section class="section-1">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis ducimus alias consequuntur vel
+                praesentium
+                earum aut, illum quaerat voluptas eum? Reprehenderit enim quisquam consectetur accusantium repudiandae
+                fugit
+                laudantium fuga rem.
+                A dignissimos laborum sed dicta officia voluptatibus reprehenderit iusto eius porro consequatur
+                asperiores totam
+                corrupti quo, eum excepturi libero fugiat, ipsam dolores ex! Voluptatem ullam nisi enim, eum molestias
+                earum.
+                Sint quae quam exercitationem ut dicta dolorum possimus deleniti repellendus quos? Quis, quasi dolorem?
+                Ullam ut
+                iste eius ratione quo voluptatum, perspiciatis dolor veritatis, illum sequi sunt, maxime iure
+                perferendis.
+                Reiciendis id nemo soluta error ratione fugit illo temporibus minus itaque ipsam consequuntur quas
+                quisquam sit,
+                quibusdam non perferendis sed totam tempore officiis culpa omnis molestias architecto quo. Sint,
+                dignissimos!
+                Cum eligendi veniam quos quis recusandae dicta molestiae molestias tempora repellat sapiente harum,
+                reiciendis
+                exercitationem itaque corrupti. Soluta, facere praesentium cumque, unde atque eaque animi veritatis iste
+                neque
+                esse itaque.
+                Consectetur distinctio veniam dicta suscipit voluptates eum, deserunt, maxime, libero vero sed
+                inventore. Fuga
+                distinctio dicta assumenda esse impedit aliquam labore nihil voluptates vel, corrupti error. Aliquam
+                laudantium
+                vero odit.
+                Architecto nobis, accusantium optio nam modi eaque impedit nihil, laudantium unde obcaecati molestias
+                hic amet?
+                Tempora voluptatem quas dolorem unde amet? In consectetur praesentium repellat magnam consequuntur.
+                Quod, non
+                veritatis.
+            </p>
+        </section>
+
+        <section class="section-2">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis ducimus alias consequuntur vel
+                praesentium
+                earum aut, illum quaerat voluptas eum? Reprehenderit enim quisquam consectetur accusantium repudiandae
+                fugit
+                laudantium fuga rem.
+                A dignissimos laborum sed dicta officia voluptatibus reprehenderit iusto eius porro consequatur
+                asperiores totam
+                corrupti quo, eum excepturi libero fugiat, ipsam dolores ex! Voluptatem ullam nisi enim, eum molestias
+                earum.
+                Sint quae quam exercitationem ut dicta dolorum possimus deleniti repellendus quos? Quis, quasi dolorem?
+                Ullam ut
+                iste eius ratione quo voluptatum, perspiciatis dolor veritatis, illum sequi sunt, maxime iure
+                perferendis.
+                Reiciendis id nemo soluta error ratione fugit illo temporibus minus itaque ipsam consequuntur quas
+                quisquam sit,
+                quibusdam non perferendis sed totam tempore officiis culpa omnis molestias architecto quo. Sint,
+                dignissimos!
+                Cum eligendi veniam quos quis recusandae dicta molestiae molestias tempora repellat sapiente harum,
+                reiciendis
+                exercitationem itaque corrupti. Soluta, facere praesentium cumque, unde atque eaque animi veritatis iste
+                neque
+                esse itaque.
+                Consectetur distinctio veniam dicta suscipit voluptates eum, deserunt, maxime, libero vero sed
+                inventore. Fuga
+                distinctio dicta assumenda esse impedit aliquam labore nihil voluptates vel, corrupti error. Aliquam
+                laudantium
+                vero odit.
+                Architecto nobis, accusantium optio nam modi eaque impedit nihil, laudantium unde obcaecati molestias
+                hic amet?
+                Tempora voluptatem quas dolorem unde amet? In consectetur praesentium repellat magnam consequuntur.
+                Quod, non
+                veritatis.
+            </p>
+        </section>
+
+        <section class="section-3">
+            <h4>A 2025-ös F1-es versenynaptár</h4>
+
+            <ul class="f1-list">
+                <li>Március 14-16. Ausztrál Nagydíj, Melbourne</li>
+                <li>Március 21-23. Kínai Nagydíj, Sanghaj</li>
+                <li>Április 4-6. Japán Nagydíj, Suzuka</li>
+                <li>Április 11-13. Bahreini Nagydíj, Szahír</li>
+                <li>Április 18-20. Szaúd-arábiai Nagydíj, Dzsidda</li>
+                <li>Május 2-4. Miami Nagydíj, Miami</li>
+                <li>Május 16-18. Emilia-romagnai Nagydíj, Imola</li>
+                <li>Május 23-25. Monacói Nagydíj, Monte-Carlo</li>
+                <li>Május 30-június 1. Spanyol Nagydíj, Barcelona</li>
+                <li>Június 13-15. Kanadai Nagydíj, Montreal</li>
+                <li>Június 27-29. Osztrák Nagydíj, Spielberg</li>
+                <li>Július 4-6. Brit Nagydíj, Silverstone</li>
+                <li>Július 25-27. Belga Nagydíj, Spa-Francorchamps</li>
+                <li>Augusztus 1-3. Magyar Nagydíj, Hungaroring</li>
+                <li>Augusztus 29-31. Holland Nagydíj, Zandvoort</li>
+                <li>Szeptember 5-7. Olasz Nagydíj, Monza</li>
+                <li>Szeptember 19-21. Azerbajdzsáni Nagydíj, Baku</li>
+                <li>Október 3-5. Szingapúri Nagydíj, Szingapúr</li>
+                <li>Október 17-19. USA Nagydíj, Austin</li>
+                <li>Október 24-26. Mexikóvárosi Nagydíj, Mexikóváros</li>
+                <li>November 7-9. Sao Pauló-i Nagydíj, Interlagos</li>
+                <li>November 20-22. Las Vegas-i Nagydíj, Las Vegas (szombati futam)</li>
+                <li>November 28-30. Katari Nagydíj, Lusail</li>
+                <li>December 5-7. Abu Dhabi Nagydíj, Abu Dhabi</li>
+            </ul>
+
+        </section>
+    </main>
+</body>
+
+</html>

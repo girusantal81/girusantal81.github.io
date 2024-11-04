@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: f1-font;
+}
+
+@font-face {
+    font-family: f1-font;
+    src: url('../font/Formula1-Regular_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.flex-container {
+    display: flex;
+    background-color: green;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    overflow: hidden;
+    background-image: url(../img/main.jpg);
+}
+
+.circuits {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 0 1 auto;
+    width: calc(20% - 20px);
+    overflow: hidden;
+    padding: 30px;
+    margin: 10px;
+    background-color: rgb(108, 236, 39);
+    justify-content: space-between;
+}
+
+.circuits img {
+    max-width: 100%;
+    height: auto;
+}
+
+nav {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+ul li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #E10600;
+    background-color: #15151e;
+    font-size: medium;
+    font-weight: bold;
+    padding: 20px;
+}
+
+ul li a:hover {
+    background-color: #f4f7f1;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+
+}
+
+sidebar {
+    grid-column: 1/5;
+    grid-row: 1/4;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+sidebar span{
+    text-align: center;
+}
+
+
+
+
+.section-1 {
+    grid-column: 5/13;
+    grid-row: 1/2;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.section-2 {
+    grid-column: 5/13;
+    grid-row: 2/3;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+.section-3 {
+    grid-column: 5/13;
+    grid-row: 3/4;
+    border: 1px solid black;
+    padding: 10px;
+    margin: 10px;
+}
+
+h4 {
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+}
+
+
+
+.f1-list {
+    padding: 0;
+    margin: 0;
+}
+
+.f1-list li {
+    float: none; /* Eltávolítjuk a float-ot */
+    margin-bottom: 10px; /* Kicsit távolság az elemek között */
+    color: #E10600; /* A szín beállítása */
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+section.content {
+    background-color: #f4f7f1;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+section.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+
+section.card {
+    float: left;
+    width: 23%;
+    margin: 1%;
+    /*padding: 1%;*/
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+#colored-table {
+    margin: auto;
+}
+
+
+table#colored-table td.practice {
+    background-color: rgb(239, 64, 64);
+}
+
+table#colored-table td.time {
+    background-color: #dc6460;
+}
+
+table#colored-table td.race {
+    background-color: #f8c7c5;
+}
+
+h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+section.card td {
+    background-color: #297fd5;
+    width: 11%;
+}
+
+td:hover {
+    font-weight: 900;
+    color: aliceblue;
+    font-size: medium;
+}
+
+*/ #weekday:hover {
+    color: aliceblue;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    background: orangered;
+    transition: background 1s, transform 1s;
+    transition-timing-function: ease-out;
+}
+
+td:hover {
+    background: greenyellow;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
