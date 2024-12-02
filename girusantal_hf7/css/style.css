@@ -355,6 +355,15 @@ table.champions-2024 .ch24 img {
     height: 100%;
 }
 
+table.teams-2024 .team24 {
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+table.teams-2024 .team24 img {
+    height: 100%;
+}
+
 /*teams*/
 
 .team-page {
