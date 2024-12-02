@@ -87,8 +87,6 @@ ul li {
     height: 100%;
 }
 
-
-
 ul li a {
     display: block;
     text-decoration: none;
@@ -104,12 +102,12 @@ ul li.logo {
 }
 
 ul li.logo a {
-    padding: 0;
+    padding: 0px;
 }
 
 ul li.logo img {
     height: 56px;
-    width: auto;
+    /* width: auto; */
 }
 
 ul li a:hover {
@@ -121,8 +119,9 @@ ul li a:hover {
         float: none;
         width: 100%;
     }
+
     ul li.logo {
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -230,6 +229,26 @@ h4 {
     padding: 10px;
 }
 
+h2 {
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.driver-2024 {
+    padding: 0;
+    margin: 0;
+}
+
+.driver-2024 li {
+    float: none;
+    margin-bottom: 10px;
+    color: #E10600;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
 .f1-list {
     padding: 0;
     margin: 0;
@@ -265,10 +284,10 @@ section.card {
     text-align: center;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:800px) {
     section.card {
         float: none;
-        width:100%;
+        width: 100%;
     }
 }
 
@@ -309,7 +328,7 @@ td:hover {
     font-size: medium;
 }
 
-*/ #weekday:hover {
+#weekday:hover {
     color: aliceblue;
 }
 
@@ -327,6 +346,15 @@ td:hover {
     transform: rotate(360deg);
 }
 
+table.champions-2024 .ch24 {
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+table.champions-2024 .ch24 img {
+    height: 100%;
+}
+
 /*teams*/
 
 .team-page {
@@ -337,7 +365,7 @@ td:hover {
 @media screen and (max-width:768px) {
     .team-page {
         display: block;
-      }
+    }
 }
 
 .team-1 {
@@ -452,26 +480,34 @@ td:hover {
 }
 
 .team-name {
-    grid-column: 4/10;
+    grid-column: 1/13;
     grid-row: 1/2;
+    padding: 30px;
+    font-size: x-large;
+    font-weight: bold;
 }
 
 .team-logo {
-    grid-column: 4/10;
+    grid-column: 1/13;
     grid-row: 2/3;
     max-width: 100%;
+    margin: auto;
 }
 
 .driver-1 {
     grid-column: 1/5;
     grid-row: 3/4;
     max-width: 100%;
+    margin: auto;
+    font-weight: bold;
 }
 
 .driver-2 {
     grid-column: 9/13;
     grid-row: 3/4;
     max-width: 100%;
+    margin: auto;
+    font-weight: bold;
 }
 
 .driver-1-name {
