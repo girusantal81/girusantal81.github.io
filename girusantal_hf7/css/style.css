@@ -340,10 +340,30 @@ td {
     transition-timing-function: ease-out;
 }
 
-td:hover {
+#colored-table td:hover {
     background: greenyellow;
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
+}
+
+/* Tooltip alapértelmezett stílusa */
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+
+td:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
 }
 
 table.champions-2024 .ch24 {
@@ -380,112 +400,121 @@ table.teams-2024 .team24 img {
 .team-1 {
     grid-column: 1/7;
     grid-row: 1/2;
-    border: 5px solid black;
+  border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#65b2f5,#005BA9,#65b2f5);
 }
 
 .team-2 {
     grid-column: 7/13;
     grid-row: 1/2;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    background-color: #297fd5;
+    background: linear-gradient(to left,#09dcc3,#00352f,#09dcc3);
 }
 
 .team-3 {
     grid-column: 1/7;
     grid-row: 2/3;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-}
+    background: linear-gradient(to left,#f86c7e,#a6051a,#f12b45);
+    }
 
 .team-4 {
     grid-column: 7/13;
     grid-row: 2/3;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#dadcdd,#6c6e6f,#dadcdd);
 }
 
 .team-5 {
     grid-column: 1/7;
     grid-row: 3/4;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#f1a8b1,#FF8000,#f1a8b1);
 }
 
 .team-6 {
     grid-column: 7/13;
     grid-row: 3/4;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#57f2ed,#00a19c,#57f2ed);
 }
 
 .team-7 {
     grid-column: 1/7;
     grid-row: 4/5;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#8698e9,#1b2b76,#8698e9);
 }
 
 .team-8 {
     grid-column: 7/13;
     grid-row: 4/5;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#79acf4,#3671C6,#79acf4);
 }
 
 .team-9 {
     grid-column: 1/7;
     grid-row: 5/6;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#97f897,#52E252,#97f897);
 }
 
 .team-10 {
     grid-column: 7/13;
     grid-row: 5/6;
-    border: 1px solid black;
+    border-radius: 20px;
     padding: 10px;
     margin: 10px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left,#89e8fd,#37BEDD,#89e8fd);
 }
 
 .team-name {
@@ -529,4 +558,55 @@ table.teams-2024 .team24 img {
     grid-column: 9/13;
     grid-row: 4/5;
     max-width: 100%;
+}
+
+/* Alap stílusok a különböző információs div-ekhez */
+.team-info, .driver1-info, .driver2-info {
+    /* background-color: rgba(0, 0, 0, 0.8); */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;  /* Alapértelmezés szerint rejtett */
+    transition: opacity 0.3s ease;  /* Gördülékeny átmenet */
+    pointer-events: none;  /* Ne zavarja az egérkattintásokat */
+}
+
+/* A driver1 információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10, .driver1-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+
+/* A driver2 információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10, .driver2-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+/* A csapat információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10, .team-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+.driver-1:hover ~ .driver1-info,
+.driver-2:hover ~ .driver2-info,
+.team-logo:hover ~ .team-info {
+    opacity: 1; 
+}
+
+/* Alapértelmezetten a div-ek elrejtése */
+.team-info, .driver1-info, .driver2-info {
+    display: none;
+}
+
+.driver-1:hover ~ .driver1-info,
+.driver-2:hover ~ .driver2-info,
+.team-logo:hover ~ .team-info {
+    display: block;  
 }
