@@ -38,4 +38,24 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
+//   <script>
+//     // Megkeressük az összes td elemet
+//     const cells = document.querySelectorAll('td');
+    
+//     // Indításkor beállítjuk a kezdő időt, amikor a cellák forgása elkezdődik
+//     let delay = 0;
+    
+//     // Végigmegyünk minden cellán
+//     cells.forEach((cell, index) => {
+//       // Késleltetjük az animációt a cellák sorrendjének megfelelően
+//       setTimeout(() => {
+//         // Alkalmazzuk a 360 fokos forgást
+//         cell.style.transform = 'rotate(360deg)';
+//       }, delay);
+      
+//       // Módosítjuk a késleltetést a következő cellához
+//       delay += 200; // 200ms késleltetés
+//     });
+//   </script>
+
 
