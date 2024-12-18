@@ -14,7 +14,7 @@
 
 .flex-container {
     display: flex;
-    background-color: #f4f7f1;
+    background-color: #b8b8bb;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
@@ -62,7 +62,15 @@ section.circuit>section {
     justify-content: space-between;
     align-items: middle;
     width: 100%;
-    /* height: fit-content; */
+}
+
+.circuits p {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.circuits:hover p {
+    opacity: 1;
 }
 
 nav {
@@ -78,11 +86,6 @@ nav {
 ul {
     list-style-type: none;
     color: white;
-    /* margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 ul li {
@@ -102,14 +105,23 @@ ul li a {
 }
 
 
-.footer-menu img{
-    height: 50px;
+.footer-menu img {
+    height: 30px;
+    float: left;
 }
 
 
-.footer-menu ul li{
-    width: 90%;
-    }
+.footer-menu ul li.logo {
+    width: 10%;
+}
+
+.footer-menu ul li.logo a {
+    padding: 0;
+}
+
+.footer-menu ul li {
+    width: 100%;
+}
 
 ul li a:hover {
     background-color: #f4f7f1;
@@ -117,13 +129,10 @@ ul li a:hover {
 
 @media screen and (max-width:768px) {
     ul li {
-        float: none;
-        width: 100%;
+        /* float: none; */
+        width: 50%;
+        padding: 0;
     }
-
-    /* ul li.logo {
-        width: 100%;
-    } */
 }
 
 main {
@@ -140,7 +149,6 @@ main {
 sidebar {
     grid-column: 1/4;
     grid-row: 1/4;
-    border: 1px solid black;
     padding: 10px;
     margin: 10px;
     text-align: center;
@@ -203,7 +211,6 @@ button:active {
 .section-1 {
     grid-column: 4/13;
     grid-row: 1/2;
-    border: 1px solid black;
     padding: 10px;
     margin: 10px;
 }
@@ -211,7 +218,6 @@ button:active {
 .section-2 {
     grid-column: 4/13;
     grid-row: 2/3;
-    border: 1px solid black;
     padding: 10px;
     margin: 10px;
 }
@@ -219,7 +225,6 @@ button:active {
 .section-3 {
     grid-column: 4/13;
     grid-row: 3/4;
-    border: 1px solid black;
     padding: 10px;
     margin: 10px;
 }
@@ -283,6 +288,10 @@ section.card {
     margin: 1%;
     background-color: #86bdf4;
     text-align: center;
+}
+
+body {
+    background-color: #f4f7f1;
 }
 
 @media screen and (max-width:800px) {
@@ -350,53 +359,52 @@ td {
 
 @keyframes rotateWave {
     0% {
-      transform: rotate(0deg);
+        transform: rotate(0deg);
     }
-  
+
     100% {
-      transform: rotate(360deg);
+        transform: rotate(360deg);
     }
-  }
-  
-  td {
+}
+
+#colored-table td {
     animation: rotateWave 2s;
-    /* Az animáció 5 másodpercig tart és végtelenségig ismétlődik */
-  }
-  
-  /* Az animáció késleltetése az egyes cellákra */
-  td:nth-child(1) {
+}
+
+/* Az animáció késleltetése az egyes cellákra */
+#colored-table td:nth-child(1) {
     animation-delay: 0s;
-  }
-  
-  td:nth-child(2) {
+}
+
+#colored-table td:nth-child(2) {
     animation-delay: 0.2s;
-  }
-  
-  td:nth-child(3) {
+}
+
+#colored-table td:nth-child(3) {
     animation-delay: 0.4s;
-  }
-  
-  td:nth-child(4) {
+}
+
+#colored-table td:nth-child(4) {
     animation-delay: 0.6s;
-  }
-  
-  td:nth-child(5) {
+}
+
+#colored-table td:nth-child(5) {
     animation-delay: 0.8s;
-  }
-  
-  td:nth-child(6) {
+}
+
+#colored-table td:nth-child(6) {
     animation-delay: 1.0s;
-  }
-  
-  td:nth-child(7) {
+}
+
+#colored-table td:nth-child(7) {
     animation-delay: 1.2s;
-  }
+}
 
 /* Tooltip alapértelmezett stílusa */
 .tooltip {
     visibility: hidden;
     position: absolute;
-    background-color: #333;
+    background-color: #5b5b61;
     color: #fff;
     border-radius: 5px;
     padding: 5px;
@@ -428,6 +436,17 @@ table.teams-2024 .team24 {
 
 table.teams-2024 .team24 img {
     height: 100%;
+}
+
+@media (max-width: 1200px) {
+    /* table.champions-2024 .ch24 img {
+        display: none;
+    } */
+
+   .champions-2024 th, td:nth-child(4),.champions-2024 th, td:nth-child(2)
+  {
+        display: none;
+    } 
 }
 
 /*teams*/
@@ -574,9 +593,11 @@ table.teams-2024 .team24 img {
 .team-logo {
     grid-column: 1/13;
     grid-row: 2/3;
-    max-width: 100%;
+    max-width: 30%;
     margin: auto;
-}
+    background-color: rgba(244, 247, 241, 0.1);
+    border-collapse:separate;
+  }
 
 .driver-1 {
     grid-column: 1/5;
@@ -610,17 +631,31 @@ table.teams-2024 .team24 img {
 .team-info,
 .driver1-info,
 .driver2-info {
-    /* background-color: rgba(0, 0, 0, 0.8); */
     color: white;
-    padding: 10px;
+    padding-top: 20px;
     border-radius: 5px;
     font-size: 0.9rem;
     opacity: 0;
-    /* Alapértelmezés szerint rejtett */
     transition: opacity 0.3s ease;
-    /* Gördülékeny átmenet */
     pointer-events: none;
-    /* Ne zavarja az egérkattintásokat */
+}
+
+@media screen and (max-width:800px) {
+
+    .team-info,
+    .driver1-info,
+    .driver2-info {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+
+    .team-info,
+    .driver1-info,
+    .driver2-info {
+        font-size: 0.5rem;
+    }
 }
 
 /* A driver1 információ */
