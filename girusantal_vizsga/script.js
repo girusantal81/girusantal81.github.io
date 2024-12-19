@@ -37,25 +37,28 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.querySelectorAll('.menu-item').forEach(item => {
+    item.addEventListener('click', function (event) {
+        // Megakadályozza az alapértelmezett linkviselkedést
+        event.preventDefault();
 
-//   <script>
-//     // Megkeressük az összes td elemet
-//     const cells = document.querySelectorAll('td');
-    
-//     // Indításkor beállítjuk a kezdő időt, amikor a cellák forgása elkezdődik
-//     let delay = 0;
-    
-//     // Végigmegyünk minden cellán
-//     cells.forEach((cell, index) => {
-//       // Késleltetjük az animációt a cellák sorrendjének megfelelően
-//       setTimeout(() => {
-//         // Alkalmazzuk a 360 fokos forgást
-//         cell.style.transform = 'rotate(360deg)';
-//       }, delay);
-      
-//       // Módosítjuk a késleltetést a következő cellához
-//       delay += 200; // 200ms késleltetés
-//     });
-//   </script>
+        // Megkapjuk az aktuális menüpont bal pozícióját
+        var menuItem = event.target.closest('li');
+        var menuPosition = menuItem.offsetLeft;
 
+        // Beállítjuk a kerék pozícióját
+        var wheel = document.getElementById('animated-wheel');
+        wheel.style.left = menuPosition + 'px';
+        
+        // Indítjuk az animációt
+        wheel.style.animation = 'moveAndBounce 3s ease-in-out forwards';
 
+        // Az animáció végén elrejtjük a képet
+        wheel.addEventListener('animationend', function () {
+            wheel.style.visibility = 'hidden'; // A kerék eltűnik, miután az animáció befejeződik
+        });
+
+        // Továbbítjuk a felhasználót a kattintott menüpontra
+        window.location.href = event.target.href;
+    });
+});

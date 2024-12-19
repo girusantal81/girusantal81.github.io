@@ -17,7 +17,7 @@
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     gap: 50px;
     padding: 0 20px 0 20px;
-   }
+}
 
 .circuits {
     position: relative;
@@ -57,25 +57,24 @@
 }
 
 .circuits:hover p {
-    display: block; /* Szövegek megjelenítése */
+    display: block;
 }
 
-/* Szövegek kiemelése */
 .circuits span {
-    font-size: 18px;
+    font-size: 20px;
     font-weight: bold;
-    position: absolute;
+    position: relative;
     top: 10px;
     left: 10px;
-    color:#f4f7f1;
-    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Szöveg árnyékolás */
-    display:block;
+    color: #f4f7f1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+    display: block;
 }
 
-/* Reszponzív beállítások */
 @media (max-width: 768px) {
     .flex-container {
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kisebb képernyők esetén kisebb oszlopok */
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        /* Kisebb képernyők esetén kisebb oszlopok */
     }
 }
 
@@ -87,6 +86,7 @@ nav {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
+    z-index: 1000;
 }
 
 ul {
@@ -110,10 +110,45 @@ ul li a {
     padding: 20px;
 }
 
+.active a {
+    background-color: #E10600;
+    color: white;
+}
 
-.footer-menu img {
-    height: 30px;
-    float: left;
+/* 
+#f1-head {
+    position: relative;
+    overflow: hidden;
+} */
+
+.animated-image {
+    position: absolute;
+    top: 0; /* Kezdő pozíció bal felső sarokban */
+    left: 0;
+    width: 50px; /* A kerék mérete */
+    height: 50px; /* A kerék mérete */
+    animation: moveAndBounce 3s ease-in-out forwards; /* Végtelen animáció */
+}
+
+@keyframes moveAndBounce {
+    0% {
+        left: 0;
+        top: 0;
+        transform: rotate(0deg);
+    }
+
+    99% {
+        left: 100%;
+        top: 0px;
+        transform: rotate(360deg);
+           }
+    100%{
+       visibility: hidden;
+    }
+}
+
+ul li:hover .animated-image {
+    animation: moveAndBounce 3s ease-in-out forwards;
 }
 
 
@@ -131,6 +166,7 @@ ul li a {
 
 ul li a:hover {
     background-color: #f4f7f1;
+    color:#E10600;
 }
 
 @media screen and (max-width:768px) {
@@ -166,7 +202,7 @@ sidebar {
     margin: auto;
 }
 
-.first-question span{
+.first-question span {
     font-size: larger;
     font-weight: 300;
 }
@@ -193,8 +229,8 @@ input {
     gap: 8px;
 }
 
-.circuit label:hover{
-    background-color:  #ea6565;
+.circuit label:hover {
+    background-color: #ea6565;
     font-weight: bolder;
 }
 
@@ -227,7 +263,8 @@ input[type="checkbox"]:checked {
 
 /* Checkbox belső jelölő négyzet, amikor pipálva van */
 input[type="checkbox"]:checked::before {
-    content: '\2713'; /* √ szimbólum */
+    content: '\2713';
+    /* √ szimbólum */
     position: absolute;
     top: 50%;
     left: 50%;
@@ -263,28 +300,29 @@ button:active {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.winner-2024{
+.winner-2024 {
     grid-column: 1/4;
     padding-top: 20px;
 }
 
-.winner-2024 img{
-width: 100%;
-padding: 10px;
-border-radius: 30px;
+.winner-2024 img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
 }
 
-.winnerteam-2024{
+.winnerteam-2024 {
     grid-column: 1/4;
     padding-top: 20px;
     padding-bottom: 30px;
 }
 
-.winnerteam-2024 img{
-width: 100%;
-padding: 10px;
-border-radius: 30px;
+.winnerteam-2024 img {
+    width: 100%;
+    padding: 10px;
+    border-radius: 30px;
 }
+
 .section-1 {
     grid-column: 4/13;
     grid-row: 1/2;
@@ -514,16 +552,17 @@ table.teams-2024 .team24 img {
 }
 
 @media (max-width: 1000px) {
-   .champions-2024 td:nth-child(4), .champions-2024 td:nth-child(2)
-  {
-        display: none;
-    } 
 
-    .champions-2024 th:nth-child(4), .champions-2024 th:nth-child(2)
-    {
-          display: none;
-      } 
-   
+    .champions-2024 td:nth-child(4),
+    .champions-2024 td:nth-child(2) {
+        display: none;
+    }
+
+    .champions-2024 th:nth-child(4),
+    .champions-2024 th:nth-child(2) {
+        display: none;
+    }
+
 }
 
 .team-page {
@@ -547,7 +586,10 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #2e93eb, #005BA9, #2e93eb);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
+
 
 .team-2 {
     grid-column: 7/13;
@@ -559,6 +601,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #079282, #027265, #079282);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-3 {
@@ -571,6 +615,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #f86c7e, #a6051a, #f12b45);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-4 {
@@ -583,6 +629,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #939798, #6c6e6f, #939798);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-5 {
@@ -595,6 +643,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #f1a8b1, #FF8000, #f1a8b1);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-6 {
@@ -607,6 +657,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #57f2ed, #00a19c, #57f2ed);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-7 {
@@ -619,6 +671,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #6d81da, #1b2b76, #6d81da);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-8 {
@@ -631,6 +685,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #79acf4, #3671C6, #79acf4);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #dae0d4;
 }
 
 .team-9 {
@@ -643,6 +699,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #97f897, #52E252, #97f897);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #f1f6ed;
 }
 
 .team-10 {
@@ -655,6 +713,8 @@ table.teams-2024 .team24 img {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     background: linear-gradient(to left, #89e8fd, #37BEDD, #89e8fd);
+    text-shadow: 3px 3px 6px rgba(241, 244, 237, 0.5);
+    color: #f1f6ed;
 }
 
 .team-name {
@@ -671,8 +731,8 @@ table.teams-2024 .team24 img {
     max-width: 30%;
     margin: auto;
     background-color: rgba(244, 247, 241, 0.1);
-    border-collapse:separate;
-  }
+    border-collapse: separate;
+}
 
 .driver-1 {
     grid-column: 1/5;
@@ -732,7 +792,6 @@ table.teams-2024 .team24 img {
     }
 }
 
-/* A driver1 információ */
 .team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
 .driver1-info {
     grid-column: 5/9;
@@ -741,7 +800,6 @@ table.teams-2024 .team24 img {
 }
 
 
-/* A driver2 információ */
 .team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
 .driver2-info {
     grid-column: 5/9;
@@ -749,7 +807,6 @@ table.teams-2024 .team24 img {
     text-align: center;
 }
 
-/* A csapat információ */
 .team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
 .team-info {
     grid-column: 5/9;
@@ -763,7 +820,6 @@ table.teams-2024 .team24 img {
     opacity: 1;
 }
 
-/* Alapértelmezetten a div-ek elrejtése */
 .team-info,
 .driver1-info,
 .driver2-info {
