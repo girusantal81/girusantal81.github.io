@@ -1,0 +1,777 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: f1-font;
+}
+
+@font-face {
+    font-family: f1-font;
+    src: url('../font/Formula1-Regular_web_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.flex-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 50px;
+    padding: 0 20px 0 20px;
+   }
+
+.circuits {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease
+}
+
+.circuits img {
+    width: 100%;
+    /* height: auto; */
+    display: block;
+    padding: 20px;
+    margin: 20px;
+}
+
+.circuits p {
+    display: none;
+    position: relative;
+    bottom: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 4px;
+    white-space: normal;
+    word-wrap: break-word;
+    width: calc(100% - 20px);
+}
+
+
+.circuits:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #939798;
+}
+
+.circuits:hover p {
+    display: block; /* Szövegek megjelenítése */
+}
+
+/* Szövegek kiemelése */
+.circuits span {
+    font-size: 18px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color:#f4f7f1;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5); /* Szöveg árnyékolás */
+    display:block;
+}
+
+/* Reszponzív beállítások */
+@media (max-width: 768px) {
+    .flex-container {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Kisebb képernyők esetén kisebb oszlopok */
+    }
+}
+
+nav {
+    list-style-type: none;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+ul {
+    list-style-type: none;
+    color: white;
+}
+
+ul li {
+    float: left;
+    width: 25%;
+    height: 100%;
+}
+
+ul li a {
+    display: block;
+    text-decoration: none;
+    color: #E10600;
+    background-color: #15151e;
+    font-size: medium;
+    font-weight: bold;
+    padding: 20px;
+}
+
+
+.footer-menu img {
+    height: 30px;
+    float: left;
+}
+
+
+.footer-menu ul li.logo {
+    width: 10%;
+}
+
+.footer-menu ul li.logo a {
+    padding: 0;
+}
+
+.footer-menu ul li {
+    width: 100%;
+}
+
+ul li a:hover {
+    background-color: #f4f7f1;
+}
+
+@media screen and (max-width:768px) {
+    ul li {
+        /* float: none; */
+        width: 50%;
+        padding: 0;
+    }
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media screen and (max-width:768px) {
+    main {
+        display: block;
+    }
+}
+
+sidebar {
+    grid-column: 1/4;
+    grid-row: 1/4;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+.first-question {
+    border: 2px solid black;
+    width: 90%;
+    margin: auto;
+}
+
+.first-question span{
+    font-size: larger;
+    font-weight: 300;
+}
+
+label {
+    margin-left: 20px;
+}
+
+input {
+    margin-right: 20px;
+}
+
+.circuit-1 {
+    padding-top: 15px;
+}
+
+.circuit-24 {
+    padding-bottom: 15px;
+}
+
+.circuit {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.circuit label:hover{
+    background-color:  #ea6565;
+    font-weight: bolder;
+}
+
+section.circuit>section {
+    display: flex;
+    justify-content: space-between;
+    align-items: middle;
+    width: 100%;
+}
+
+
+input[type="checkbox"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #d10000;
+    border-radius: 4px;
+    position: relative;
+    cursor: pointer;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+/* Ha be van pipálva (checked) */
+input[type="checkbox"]:checked {
+    background-color: #ea6565;
+    border-color: #d10000;
+}
+
+/* Checkbox belső jelölő négyzet, amikor pipálva van */
+input[type="checkbox"]:checked::before {
+    content: '\2713'; /* √ szimbólum */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+    color: #f4f7f1;
+}
+
+button {
+    background-color: #d10000;
+    color: #f4f7f1;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #b30000;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+button:active {
+    background-color: #990000;
+    transform: translateY(0);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.winner-2024{
+    grid-column: 1/4;
+    padding-top: 20px;
+}
+
+.winner-2024 img{
+width: 100%;
+padding: 10px;
+border-radius: 30px;
+}
+
+.winnerteam-2024{
+    grid-column: 1/4;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.winnerteam-2024 img{
+width: 100%;
+padding: 10px;
+border-radius: 30px;
+}
+.section-1 {
+    grid-column: 4/13;
+    grid-row: 1/2;
+    padding: 10px;
+    margin: 10px;
+}
+
+.section-2 {
+    grid-column: 4/13;
+    grid-row: 2/3;
+    padding: 10px;
+    margin: 10px;
+}
+
+.section-3 {
+    grid-column: 4/13;
+    grid-row: 3/4;
+    padding: 10px;
+    margin: 10px;
+}
+
+h4 {
+    text-align: center;
+    font-size: x-large;
+    padding: 10px;
+}
+
+h2 {
+    text-align: center;
+    font-size: x-large;
+    padding: 20px;
+}
+
+.driver-2024 {
+    padding: 0;
+    margin: 0;
+}
+
+.driver-2024 li {
+    float: none;
+    margin-bottom: 10px;
+    color: #E10600;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+.f1-list {
+    padding: 0;
+    margin: 0;
+}
+
+.f1-list li {
+    float: none;
+    margin-bottom: 10px;
+    color: #E10600;
+    text-align: center;
+    width: 100%;
+    padding: 5px;
+}
+
+section.content {
+    background-color: #f4f7f1;
+    max-width: 100%;
+    padding: 10px;
+    margin: 0 auto;
+}
+
+section.content::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+section.card {
+    float: left;
+    width: 23%;
+    margin: 1%;
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+body {
+    background-color: #f4f7f1;
+}
+
+@media screen and (max-width:800px) {
+    section.card {
+        float: none;
+        width: 100%;
+    }
+}
+
+#colored-table {
+    margin: auto;
+}
+
+
+table#colored-table td.practice {
+    background-color: #f8c7c5;
+}
+
+table#colored-table td.time {
+    background-color: #dc6460;
+}
+
+table#colored-table td.race {
+    background-color: rgb(239, 64, 64);
+}
+
+h3 {
+    padding: 10px;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+}
+
+section.card td {
+    background-color: #297fd5;
+    width: 11%;
+}
+
+td:hover {
+    font-weight: 900;
+    color: aliceblue;
+    font-size: medium;
+}
+
+#weekday:hover {
+    color: aliceblue;
+}
+
+td {
+    width: 30px;
+    height: 30px;
+    background: orangered;
+    transition: background 1s, transform 1s;
+    transition-timing-function: ease-out;
+}
+
+#colored-table td:hover {
+    background: greenyellow;
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+}
+
+
+@keyframes rotateWave {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+#colored-table td {
+    animation: rotateWave 2s;
+}
+
+/* Az animáció késleltetése az egyes cellákra */
+#colored-table td:nth-child(1) {
+    animation-delay: 0s;
+}
+
+#colored-table td:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+#colored-table td:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+#colored-table td:nth-child(4) {
+    animation-delay: 0.3s;
+}
+
+#colored-table td:nth-child(5) {
+    animation-delay: 0.4s;
+}
+
+#colored-table td:nth-child(6) {
+    animation-delay: 0.5s;
+}
+
+#colored-table td:nth-child(7) {
+    animation-delay: 0.6s;
+}
+
+.tooltip {
+    visibility: hidden;
+    position: absolute;
+    background-color: #5b5b61;
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 14px;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+td:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+table.champions-2024 .ch24 {
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+table.champions-2024 .ch24 img {
+    height: 100%;
+}
+
+table.teams-2024 .team24 {
+    background-color: #86bdf4;
+    text-align: center;
+}
+
+table.teams-2024 .team24 img {
+    height: 100%;
+}
+
+@media (max-width: 1000px) {
+   .champions-2024 td:nth-child(4), .champions-2024 td:nth-child(2)
+  {
+        display: none;
+    } 
+
+    .champions-2024 th:nth-child(4), .champions-2024 th:nth-child(2)
+    {
+          display: none;
+      } 
+   
+}
+
+.team-page {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+}
+
+@media screen and (max-width:768px) {
+    .team-page {
+        display: block;
+    }
+}
+
+.team-1 {
+    grid-column: 1/7;
+    grid-row: 1/2;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #2e93eb, #005BA9, #2e93eb);
+}
+
+.team-2 {
+    grid-column: 7/13;
+    grid-row: 1/2;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #079282, #027265, #079282);
+}
+
+.team-3 {
+    grid-column: 1/7;
+    grid-row: 2/3;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #f86c7e, #a6051a, #f12b45);
+}
+
+.team-4 {
+    grid-column: 7/13;
+    grid-row: 2/3;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #939798, #6c6e6f, #939798);
+}
+
+.team-5 {
+    grid-column: 1/7;
+    grid-row: 3/4;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #f1a8b1, #FF8000, #f1a8b1);
+}
+
+.team-6 {
+    grid-column: 7/13;
+    grid-row: 3/4;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #57f2ed, #00a19c, #57f2ed);
+}
+
+.team-7 {
+    grid-column: 1/7;
+    grid-row: 4/5;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #6d81da, #1b2b76, #6d81da);
+}
+
+.team-8 {
+    grid-column: 7/13;
+    grid-row: 4/5;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #79acf4, #3671C6, #79acf4);
+}
+
+.team-9 {
+    grid-column: 1/7;
+    grid-row: 5/6;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #97f897, #52E252, #97f897);
+}
+
+.team-10 {
+    grid-column: 7/13;
+    grid-row: 5/6;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    background: linear-gradient(to left, #89e8fd, #37BEDD, #89e8fd);
+}
+
+.team-name {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    padding: 30px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.team-logo {
+    grid-column: 1/13;
+    grid-row: 2/3;
+    max-width: 30%;
+    margin: auto;
+    background-color: rgba(244, 247, 241, 0.1);
+    border-collapse:separate;
+  }
+
+.driver-1 {
+    grid-column: 1/5;
+    grid-row: 3/4;
+    max-width: 100%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.driver-2 {
+    grid-column: 9/13;
+    grid-row: 3/4;
+    max-width: 100%;
+    margin: auto;
+    font-weight: bold;
+}
+
+.driver-1-name {
+    grid-column: 1/5;
+    grid-row: 4/5;
+    max-width: 100%;
+}
+
+.driver-2-name {
+    grid-column: 9/13;
+    grid-row: 4/5;
+    max-width: 100%;
+}
+
+.team-info,
+.driver1-info,
+.driver2-info {
+    color: white;
+    padding-top: 20px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+@media screen and (max-width:800px) {
+
+    .team-info,
+    .driver1-info,
+    .driver2-info {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width:1000px) {
+
+    .team-info,
+    .driver1-info,
+    .driver2-info {
+        font-size: 0.6rem;
+    }
+}
+
+/* A driver1 információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
+.driver1-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+
+/* A driver2 információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
+.driver2-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+/* A csapat információ */
+.team-1 .team-2 .team-3 .team-4 .team-5 .team-6 .team-7 .team-8 .team-9 .team-10,
+.team-info {
+    grid-column: 5/9;
+    grid-row: 3/4;
+    text-align: center;
+}
+
+.driver-1:hover~.driver1-info,
+.driver-2:hover~.driver2-info,
+.team-logo:hover~.team-info {
+    opacity: 1;
+}
+
+/* Alapértelmezetten a div-ek elrejtése */
+.team-info,
+.driver1-info,
+.driver2-info {
+    display: none;
+}
+
+.driver-1:hover~.driver1-info,
+.driver-2:hover~.driver2-info,
+.team-logo:hover~.team-info {
+    display: block;
+}
