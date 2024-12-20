@@ -36,29 +36,3 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
-
-document.querySelectorAll('.menu-item').forEach(item => {
-    item.addEventListener('click', function (event) {
-        // Megakadályozza az alapértelmezett linkviselkedést
-        event.preventDefault();
-
-        // Megkapjuk az aktuális menüpont bal pozícióját
-        var menuItem = event.target.closest('li');
-        var menuPosition = menuItem.offsetLeft;
-
-        // Beállítjuk a kerék pozícióját
-        var wheel = document.getElementById('animated-wheel');
-        wheel.style.left = menuPosition + 'px';
-        
-        // Indítjuk az animációt
-        wheel.style.animation = 'moveAndBounce 3s ease-in-out forwards';
-
-        // Az animáció végén elrejtjük a képet
-        wheel.addEventListener('animationend', function () {
-            wheel.style.visibility = 'hidden'; // A kerék eltűnik, miután az animáció befejeződik
-        });
-
-        // Továbbítjuk a felhasználót a kattintott menüpontra
-        window.location.href = event.target.href;
-    });
-});
